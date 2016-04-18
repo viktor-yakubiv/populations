@@ -10,6 +10,9 @@ public class Board implements Runnable, Iterable<Cell> {
     private int width;
     private int height;
 
+    // Populations
+    private int populationsCount = 1;
+
     // Board data - map af alive cells and it's states
     private HashMap<Point, Integer> cells = new HashMap<>();
 
@@ -24,6 +27,14 @@ public class Board implements Runnable, Iterable<Cell> {
 
     public int getHeight() {
         return height;
+    }
+
+    public int getPopulationsCount() {
+        return populationsCount;
+    }
+
+    public void setPopulationsCount(int populationsCount) {
+        this.populationsCount = populationsCount;
     }
 
     public Integer get(int x, int y) {
