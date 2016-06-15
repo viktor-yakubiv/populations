@@ -100,19 +100,6 @@ class BoardView extends JPanel {
         g2d.setColor(new Color(0x616161));
         cells.forEach(g2d::draw);
 
-//        for (int row = 0; row < rowCount; row++) {
-//            for (int col = 0; col < colCount; col++) {
-//                Rectangle cell = cells.get(row * colCount + col);
-//                int colorIndex = model.get(row, col);
-//                if (colorIndex != -1) {
-//                    g2d.setColor(colors[colorIndex]);
-//                    g2d.fill(cell);
-//                }
-//                g2d.setColor(Color.GRAY);
-//                g2d.draw(cell);
-//            }
-//        }
-
         g2d.dispose();
     }
 

@@ -42,6 +42,8 @@ public class BoardController extends JFrame {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         getContentPane().add(panel, BorderLayout.LINE_END);
 
+        panel.add(Box.createVerticalGlue());
+
         // Population chooser.
         JLabel label = new JLabel("Population id:");
         panel.add(label);
@@ -53,6 +55,9 @@ public class BoardController extends JFrame {
         startButton.addActionListener(this::controlStartPause);
         startButton.setActionCommand("start");
         panel.add(startButton);
+
+        // Fix space after
+        panel.add(Box.createVerticalGlue());
     }
 
     void controlStartPause(ActionEvent e) {
@@ -134,7 +139,7 @@ class BoardIterationsRunner implements Runnable {
             view.repaint();
 
             try {
-                Thread.sleep(1000);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 return;
             }
